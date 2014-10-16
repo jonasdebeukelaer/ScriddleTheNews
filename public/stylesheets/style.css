@@ -6,3 +6,17 @@ body {
 a {
   color: #00B7FF;
 }
+
+.inBlue {
+	color: blue;
+}
+
+.pic {
+	width: 300px;
+}
+
+.container {
+	width: 200px;
+	height:200px;
+	background-color: #B4D455;
+}
