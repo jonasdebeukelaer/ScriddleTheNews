@@ -1,6 +1,7 @@
 body {
   padding: 5px;
   font: 14px Helvetica, "Lucida Grande", Arial, sans-serif;
+  color: #8C8C8C;
 }
 
 a {
@@ -17,11 +18,11 @@ a {
 .container {
 	padding: 5px;
 	position: absolute;
-	width: 90%;
+	width: 100%;
 	left-margin: 1px;
 	background-color: #ffffff;
 	border-radius: 2px;
-	border: 1px solid #A6D5FF;
+	
 }
 
 .container.article {
@@ -30,10 +31,10 @@ a {
 }
 
 .container.comments {
-	left: 10%;
+	left: 20%;
 	width: 80%;
 	height: 600px;
-	border: 1px solid #A6D5FF;
+	
 	float: right;
 	position: fixed;
 }

@@ -13,9 +13,25 @@ $(document).ready(function(){
 
     });  
 
+
+    $('.submit').click(function(){
+    	var comment = $('.com_box').text();
+    	var pnum = clicked_p;
+
+    	var new_comment = jQuery.parseJSON( '{ "pnum": pnum, "comment": comment }' );
+
+    })
+
+    var clicked_p = "";
+
     var comments_open = false;
     $( 'p' ).click(function(){
     	console.log('swiped left')
+		var rect = this.getBoundingClientRect();
+		
+		clicked_p = this.className
+		console.log(clicked_p)
+
     	if (comments_open == false) {
     		$( ".container.article" ).animate({
     			left: "-=80%",
