@@ -1,14 +1,10 @@
 body {
-  padding: 20px;
+  padding: 5px;
   font: 14px Helvetica, "Lucida Grande", Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
-}
-
-.inBlue {
-	color: blue;
 }
 
 .pic {
@@ -19,11 +15,43 @@ a {
 }
 
 .container {
-	padding: 6px;
-	position: center;
-	width: 100%;
+	padding: 5px;
+	position: absolute;
+	width: 90%;
 	left-margin: 1px;
-	background-color: F5FFFA;
+	background-color: #ffffff;
 	border-radius: 2px;
 	border: 1px solid #A6D5FF;
+}
+
+.container.article {
+	left: 0px;
+	z-index: 10;
+}
+
+.container.comments {
+	left: 10%;
+	width: 80%;
+	height: 600px;
+	border: 1px solid #A6D5FF;
+	float: right;
+	position: fixed;
+}
+
+.com_box {
+	background-color: #DEDEDE;
+	position: center;
+	width: 60%;
+	border: 1px solid #A6D5FF;
+	float: left;
+	margin: 10px;
+}
+
+.sample_comment {
+	position: center;
+	background-color: #D6D6D6;
+	width: 90%;
+	height: 40px;
+	margin: 20px;
+	text-align: center;
 }
