@@ -1,33 +1,67 @@
 $(document).ready(function(){
 	
 	console.log('Hello!')
-
-	$('.pic').click(function(){
-		$('.pic').fadeOut('slow');
-	});
-
-	$.ajax({
-		url:'http://graph.facebook.com/jeshuamaxey',
-		method:'GET'
-	}).success(function(data){
-		console.log(data)
-	})
-
-	$('.getInfo').click(function(){
-		var user = $('.fader').val()
-		console.log(user)
-		var username = 'http://graph.facebook.com/' + user
-		$.ajax({
-			url:username,
-			method:'GET'
-		}).success(function(data){
-			console.log(data)
-
-		})		
-
-	});
   
-      
+    $( 'p' ).on( "swipeleft", function(){
+    	console.log('swiped left')
+    	$( ".container" ).animate({
+    		opacity: 0.25,
+    		left: "+=50",
+  		}, 5000, function() {
+    	// Animation complete.
+  		});
+
+    });  
+
+    var comments_open = false;
+    $( 'p' ).click(function(){
+    	console.log('swiped left')
+    	if (comments_open == false) {
+    		$( ".container.article" ).animate({
+    			left: "-=80%",
+    			opacity: 0.5
+  			}, 500, function() {
+ 
+  			});
+	  		comments_open = true;
+  		} else {
+  			
+  			$( ".container.article" ).animate({
+    			opacity: 1,
+    			left: "+=80%"
+  			}, 500, function() {
+
+	  		});
+	  		comments_open = false;
+  		}
+
+
+    }); 
+
+    $( 'p' ).on("swipeleft", function(){
+    	console.log('swiped left')
+
+    	if (comments_open == false) {
+    		$( ".container.article" ).animate({
+    			left: "-=80%",
+    			opacity: 0.5
+  			}, 500, function() {
+ 
+  			});
+	  		comments_open = true;
+  		} else {
+  			
+  			$( ".container.article" ).animate({
+    			opacity: 1,
+    			left: "+=80%"
+  			}, 500, function() {
+
+	  		});
+	  		comments_open = false;
+  		}
+
+
+    }); 
 
 })
 
