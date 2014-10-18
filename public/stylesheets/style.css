@@ -1,6 +1,6 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 20px;
+  font: 14px Helvetica, "Lucida Grande", Arial, sans-serif;
 }
 
 a {
@@ -14,9 +14,12 @@ a {
 .pic {
 	width: 100%;
 	position: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 .container {
+	padding: 6px;
 	position: center;
 	width: 100%;
 	left-margin: 1px;

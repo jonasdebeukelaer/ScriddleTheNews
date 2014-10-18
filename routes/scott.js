@@ -6,4 +6,5 @@ router.get('/', function(req, res) {
   res.render('scott', { title: 'Scott' });
 });
 
+
 module.exports = router;
