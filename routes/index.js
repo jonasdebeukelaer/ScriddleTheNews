@@ -11,10 +11,10 @@ var comments = [];						// creates comments container: array of comments hashes
 
 
 // When a paragraph is clicked to view comments
-router.post('/', function(req, res) {
-	var pnum = req.body;						// gets pnum
-    res.send(comments[pnum]);					// returns comments for relevant pnum
-}
+// router.post('/', function(req, res) {
+// 	var pnum = req.body;						// gets pnum
+//     res.send(comments[pnum]);					// returns comments for relevant pnum
+// }
 
 
 
