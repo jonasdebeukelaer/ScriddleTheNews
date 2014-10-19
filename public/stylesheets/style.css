@@ -74,6 +74,22 @@ div.col-xs-2.check {
 	margin: 3%;
 }
 
+.noglow:focus {
+    outline:none;
+    box-shadow: none;
+}
+
+.heatmap1 {
+	background: #ffffff;
+	background: -moz-linear-gradient(top,  #ffffff 0%, #99d7ff 50%, #f7f8f9 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#99d7ff), color-stop(100%,#f7f8f9));
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#99d7ff 50%,#f7f8f9 100%);
+	background: -o-linear-gradient(top,  #ffffff 0%,#99d7ff 50%,#f7f8f9 100%);
+	background: -ms-linear-gradient(top,  #ffffff 0%,#99d7ff 50%,#f7f8f9 100%);
+	background: linear-gradient(to bottom,  #ffffff 0%,#99d7ff 50%,#f7f8f9 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f7f8f9',GradientType=0 );
+}
+
 .sample_comment {
 	position: center;
 	background-color: #D6D6D6;
@@ -93,6 +109,7 @@ div.col-xs-2.check {
 	position: fixed;
 	z-index: 20;
 	margin: 0px;
+	border-bottom: 1px solid #357ebd; 
 }
 
 .btn.btn-primary.btn-block.submit {

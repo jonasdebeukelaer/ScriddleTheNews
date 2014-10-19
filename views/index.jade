@@ -1,12 +1,12 @@
 extends layout
 
 block content
-  div.container.header.row
-    h1(tabIndex="-1").col-xs-10 reader's pulse 
-    div.col-xs-2.check
+  div.container.header.row.noglow
+    h1(tabIndex="-1").col-xs-10.noglow reader's pulse 
+    div.col-xs-2.check.noglow
       input(type='checkbox').toggle
     
-  div.container.article(tabIndex="-2")
+  div.container.article.noglow(tabIndex="-2")
     p.p1 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et 
     p.p2 quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro 
     p.p3 quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad 
