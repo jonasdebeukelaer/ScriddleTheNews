@@ -63,11 +63,24 @@ $(document).ready(function(){
     	if($('.toggle').prop('checked')) {
     		$('toggle').prop('checked', false);
     		$('toggle').css('background-color: #428bca')
+   
+    		$('.p3').removeClass('bg1')
+    		$('.p5').removeClass('bg3')
+    		$('.p6').removeClass('bg2')
+    		$('.p3').addClass('reset_bg')
+    		$('.p5').addClass('reset_bg')
+    		$('.p6').addClass('reset_bg')
 		} else {
     		$('toggle').prop('checked', true);
     		$('toggle').css('background-color: #ffffff')
-}
-
+			
+			$('.p3').removeClass('reset_bg')
+    		$('.p5').removeClass('reset_bg')
+    		$('.p6').removeClass('reset_bg')
+			$('.p3').addClass('bg1')
+    		$('.p5').addClass('bg3')
+    		$('.p6').addClass('bg2')
+    	}
     })
 
     $( 'p' ).on("swipeleft", function(){
