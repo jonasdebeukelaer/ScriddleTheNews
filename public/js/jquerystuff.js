@@ -39,18 +39,16 @@ $(document).ready(function(){
 		console.log(clicked_p)
 
     	if (comments_open == false) {
-    		$(clicked_p).css('background-color: #7BA8E3')
+    		$(clicked_p).css('background-color', '#7BA8E3')
     		$( ".container.article" ).animate({
     			left: "-=80%",
-    			opacity: 0.5
   			}, 500, function() {
  
   			});
 	  		comments_open = true;
   		} else {
-  			$(clicked_p).css('background-color: #ffffff')
+  			$(clicked_p).css('background-color', '#ffffff')
   			$( ".container.article" ).animate({
-    			opacity: 1,
     			left: "+=80%"
   			}, 500, function() {
 
@@ -60,6 +58,17 @@ $(document).ready(function(){
 
 
     }); 
+
+    $('.check').click(function(){
+    	if($('.toggle').prop('checked')) {
+    		$('toggle').prop('checked', false);
+    		$('toggle').css('background-color: #428bca')
+		} else {
+    		$('toggle').prop('checked', true);
+    		$('toggle').css('background-color: #ffffff')
+}
+
+    })
 
     $( 'p' ).on("swipeleft", function(){
     	console.log('swiped left')
