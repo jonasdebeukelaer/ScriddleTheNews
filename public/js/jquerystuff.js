@@ -18,9 +18,15 @@ $(document).ready(function(){
     	var comment = $('.com_box').text();
     	var pnum = clicked_p;
 
-    	var new_comment = jQuery.parseJSON( '{ "pnum": pnum, "comment": comment }' );
-
-    })
+    	var pass_comment = jQuery.parseJSON( '{ "pnum": pnum, "comment": comment }' );
+    	$.ajax({
+  			type: "POST",
+  			url: url,
+  			data: { "pnum": pnum, "comment": comment },
+  			success: success,
+  			dataType: string
+    	});
+    });
 
     var clicked_p = "";
 
@@ -33,6 +39,7 @@ $(document).ready(function(){
 		console.log(clicked_p)
 
     	if (comments_open == false) {
+    		$(clicked_p).css('background-color: #7BA8E3')
     		$( ".container.article" ).animate({
     			left: "-=80%",
     			opacity: 0.5
@@ -41,7 +48,7 @@ $(document).ready(function(){
   			});
 	  		comments_open = true;
   		} else {
-  			
+  			$(clicked_p).css('background-color: #ffffff')
   			$( ".container.article" ).animate({
     			opacity: 1,
     			left: "+=80%"
