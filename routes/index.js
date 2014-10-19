@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Article' });
 });
 
 
@@ -11,17 +11,10 @@ var comments = [];						// creates comments container: array of comments hashes
 
 
 // When a paragraph is clicked to view comments
-<<<<<<< HEAD
 router.post('/getcomments', function(req, res) {
 	var pnum = req.body;						// gets pnum
     res.send(comments[pnum]);					// returns comments for relevant pnum
-}
-=======
-// router.post('/', function(req, res) {
-// 	var pnum = req.body;						// gets pnum
-//     res.send(comments[pnum]);					// returns comments for relevant pnum
-// }
->>>>>>> 9d96691d64c0638063219620747f37d36e5f95d7
+});
 
 
 
