@@ -11,7 +11,7 @@ var comments = [];						// creates comments container: array of comments hashes
 
 
 // When a paragraph is clicked to view comments
-router.post('/', function(req, res) {
+router.post('/getcomments', function(req, res) {
 	var pnum = req.body;						// gets pnum
     res.send(comments[pnum]);					// returns comments for relevant pnum
 }
@@ -19,7 +19,7 @@ router.post('/', function(req, res) {
 
 
 // When a comment is posted
-router.post('/', function(req, res) {
+router.post('/postcomment', function(req, res) {
   var commentIn = req.body;						// imports comment in json format
 
   if (!comments[commentIn.pnum]) {				// if no comments exist for that pnum
